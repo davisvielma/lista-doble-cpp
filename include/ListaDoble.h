@@ -24,6 +24,7 @@ class ListaDoble {
 		void imprimirAlFinal() const;
 		int verDatoAlInicio() const;
 		int verDatoAlFinal() const;
+		bool buscar(int) const;
 	
 };
 

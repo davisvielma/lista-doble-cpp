@@ -44,6 +44,10 @@ int main(int argc, char const *argv[]) {
 				case 7:
 					controlador.imprimirDatoDelFinal(lista);
 					break;
+
+				case 8:
+					controlador.buscarElemento(lista);
+					break;
 			}
 
 		} catch (int e) {

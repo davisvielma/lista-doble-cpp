@@ -77,3 +77,21 @@ int ListaDoble::verDatoAlInicio() const {
 int ListaDoble::verDatoAlFinal() const {
 	return ((!this->vacio()) ? this->final->anterior->dato : 0); 
 }
+
+bool ListaDoble::buscar(int dato) const {
+	if(this->vacio()) return false;
+
+	Nodo *aux = this->inicio->siguiente;
+	bool encontrado = false;
+
+	while(aux != this->final) {
+		if(aux->dato == dato) {
+			encontrado = true;
+			break;
+		}
+
+		aux = aux->siguiente;
+	}
+
+	return encontrado;
+}

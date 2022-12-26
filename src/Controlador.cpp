@@ -85,3 +85,19 @@ void Controlador::imprimirDatoDelFinal(ListaDoble *l) const {
 
 	cout << "\nEl dato que se encuentra al final de la lista es: " << l->verDatoAlFinal() << "." << endl;
 }
+
+void Controlador::buscarElemento(ListaDoble *l) {
+	if(l->vacio()) {
+		this->vacia();
+		return;
+	}
+
+	int dato = this->pedirDato();
+
+	if(l->buscar(dato)) {
+		cout << "\nEl numero " << dato << " si existe en la lista." << endl;
+	} else {
+		cout << AMARILLO "\nEl numero " << dato << " no existe en la lista." << endl;	
+	}
+
+}

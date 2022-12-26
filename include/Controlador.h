@@ -19,6 +19,7 @@ class Controlador {
 		void imprimirTamano(ListaDoble *) const;
 		void imprimirDatoDelInicio(ListaDoble *) const;
 		void imprimirDatoDelFinal(ListaDoble *) const;
+		void buscarElemento(ListaDoble *);
 
 };
 
