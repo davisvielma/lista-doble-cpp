@@ -69,3 +69,11 @@ void ListaDoble::imprimirAlFinal() const {
 		cout << endl;
 	}
 }
+
+int ListaDoble::verDatoAlInicio() const {
+	return ((!this->vacio()) ? this->inicio->siguiente->dato : 0); 
+}
+
+int ListaDoble::verDatoAlFinal() const {
+	return ((!this->vacio()) ? this->final->anterior->dato : 0); 
+}

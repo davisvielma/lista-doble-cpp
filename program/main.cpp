@@ -16,7 +16,7 @@ int main(int argc, char const *argv[]) {
 			controlador.menu();
 			cin >> opcion;
 
-			if(opcion < 1 || opcion > 10) throw -1;
+			if(opcion < 1 || opcion > 12) throw -1;
 
 			switch(opcion) {
 				case 1:
@@ -36,12 +36,20 @@ int main(int argc, char const *argv[]) {
 				case 5:
 					controlador.imprimirTamano(lista);
 					break;
+
+				case 6:
+					controlador.imprimirDatoDelInicio(lista);
+					break;
+
+				case 7:
+					controlador.imprimirDatoDelFinal(lista);
+					break;
 			}
 
 		} catch (int e) {
 			cout << ROJO "\nERROR!! Opción invalida." << endl;
 		}		
-	} while (opcion != 10);
+	} while (opcion != 12);
 
 	
 	return 0;

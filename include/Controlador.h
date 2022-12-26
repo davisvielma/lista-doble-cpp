@@ -17,6 +17,9 @@ class Controlador {
 		void imprimirDatosAlInicio(ListaDoble *) const;
 		void imprimirDatosAlFinal(ListaDoble *) const;
 		void imprimirTamano(ListaDoble *) const;
+		void imprimirDatoDelInicio(ListaDoble *) const;
+		void imprimirDatoDelFinal(ListaDoble *) const;
+
 };
 
 #endif //CONTROLADOR_H

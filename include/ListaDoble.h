@@ -22,6 +22,8 @@ class ListaDoble {
 		void agregarAlFinal(int);
 		void imprimirAlInicio() const;
 		void imprimirAlFinal() const;
+		int verDatoAlInicio() const;
+		int verDatoAlFinal() const;
 	
 };
 
