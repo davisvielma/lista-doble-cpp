@@ -95,3 +95,47 @@ bool ListaDoble::buscar(int dato) const {
 
 	return encontrado;
 }
+
+bool ListaDoble::eliminarAlInicio() {
+	if(this->vacio()) return false;
+
+	Nodo *aux = this->inicio->siguiente->siguiente;
+	delete this->inicio->siguiente;
+
+	this->inicio->siguiente = aux;
+	aux->anterior = this->inicio;
+
+	this->cambiarTamano(-1);
+
+}
+
+bool ListaDoble::eliminarAlFinal() {
+	Nodo *aux = this->final->anterior->anterior;
+
+	delete this->final->anterior;
+
+	this->final->anterior = aux;
+	aux->siguiente = this->final;
+
+	this->cambiarTamano(-1);
+}
+
+bool ListaDoble::eliminarDato(int dato) {
+	if(this->vacio() || !this->buscar(dato)) return false;
+
+	Nodo *aux = this->inicio;
+
+	while(aux->siguiente != this->final) {
+		if(aux->siguiente->dato != dato) {
+			aux = aux->siguiente;
+		} else {
+			Nodo *aux2 = aux->siguiente->siguiente;
+			delete aux->siguiente;
+			aux->siguiente = aux2;
+			aux->siguiente->anterior = aux;
+			this->cambiarTamano(-1);
+		}
+	}
+
+	return true;
+}

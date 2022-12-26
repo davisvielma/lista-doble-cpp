@@ -20,6 +20,9 @@ class Controlador {
 		void imprimirDatoDelInicio(ListaDoble *) const;
 		void imprimirDatoDelFinal(ListaDoble *) const;
 		void buscarElemento(ListaDoble *);
+		void eliminarDatoAlInicio(ListaDoble *);
+		void eliminarDatoAlFinal(ListaDoble *);
+		void eliminarUnDato(ListaDoble *);
 
 };
 

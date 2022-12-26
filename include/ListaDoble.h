@@ -25,6 +25,9 @@ class ListaDoble {
 		int verDatoAlInicio() const;
 		int verDatoAlFinal() const;
 		bool buscar(int) const;
+		bool eliminarAlInicio();
+		bool eliminarAlFinal();
+		bool eliminarDato(int);
 	
 };
 

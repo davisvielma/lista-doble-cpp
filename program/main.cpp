@@ -48,6 +48,18 @@ int main(int argc, char const *argv[]) {
 				case 8:
 					controlador.buscarElemento(lista);
 					break;
+
+				case 9:
+					controlador.eliminarDatoAlInicio(lista);
+					break;
+
+				case 10:
+					controlador.eliminarDatoAlFinal(lista);
+					break;
+
+				case 11:
+					controlador.eliminarUnDato(lista);
+					break;
 			}
 
 		} catch (int e) {

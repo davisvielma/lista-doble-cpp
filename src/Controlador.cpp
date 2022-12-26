@@ -101,3 +101,38 @@ void Controlador::buscarElemento(ListaDoble *l) {
 	}
 
 }
+
+void Controlador::eliminarDatoAlInicio(ListaDoble *l) {
+	if(l->vacio()) {
+		this->vacia();
+		return;
+	}
+
+	cout << "\nSe elimino el numero " << l->verDatoAlInicio() << "." << endl;
+	l->eliminarAlInicio();
+}
+		
+void Controlador::eliminarDatoAlFinal(ListaDoble *l) {
+	if(l->vacio()) {
+		this->vacia();
+		return;
+	}
+
+	cout << "\nSe elimino el numero " << l->verDatoAlFinal() << "." << endl;
+	l->eliminarAlFinal();
+}
+
+void Controlador::eliminarUnDato(ListaDoble *l) {
+	if(l->vacio()) {
+		this->vacia();
+		return;
+	}
+
+	int dato = this->pedirDato();
+
+	if(l->eliminarDato(dato)) {
+		cout << "\nSe elimino el numero " << dato << " de la lista." << endl;
+	} else {
+		cout << AMARILLO "\nEl numero " << dato << " no existe en la lista." << endl;
+	}
+}
